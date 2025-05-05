@@ -1,0 +1,46 @@
+
+@use './variables';
+
+.text-primary-color {
+  color: variables.$primary-text-color;
+}
+
+.text-secondary-color {
+  color: variables.$secondary-text-color;
+}
+
+.text-gray-color {
+  color: variables.$text-gray-color;
+}
+
+.bg-color {
+  background-color: variables.$bg-color;
+}
+
+.border-white {
+  background-color: variables.$bg-border-color;
+}
+
+.fontFamily {
+  font-family: variables.$font-family;
+}
+
+.search-input {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+
+  input {
+    width: 100%;
+    padding-left: 2.5rem;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+    color: variables.$primary-text-color;
+    pointer-events: none;
+  }
+}

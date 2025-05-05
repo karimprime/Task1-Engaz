@@ -1,0 +1,56 @@
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    @for(card of visibleCards; track $index) {
+      <div class="col d-flex">
+        <div class="card shadow border-0 h-100 w-100 d-flex flex-column hover-effect">
+          <img
+            [src]="card.image"
+            class="card-img-top px-4 py-3"
+            [alt]="card.title + ' image'"
+            loading="lazy"
+          />
+
+          <div class="card-body px-4 d-flex flex-column justify-content-between flex-grow-1">
+            <div>
+              <h6 class="fw-bold fs-6 text-primary-color mb-3 fontFamily">{{ card.category }}</h6>
+
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0 fs-4 fw-bold fontFamily">{{ card.title }}</h5>
+                <i class="bi bi-arrow-up-right fs-5 fw-bolder"></i>
+              </div>
+
+              <p class="text-gray-color fw-normal fs-5 mb-4 fontFamily">
+                {{ card.description }}
+              </p>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 pt-3 mt-auto author-block">
+              <img
+                [src]="card.avatar"
+                [alt]="card.author"
+                class="rounded-circle"
+                width="40"
+                height="40"
+                loading="lazy"
+              />
+
+              <div class="author-info py-2">
+                <h6 class="mb-1 fw-semibold fontFamily">{{ card.author }}</h6>
+                <p class="mb-0 text-muted small fontFamily">{{ card.date }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  @if (showLoadMore) {
+    <button
+      class="bg-color border-0 rounded text-secondary-color px-3 py-2 fw-medium fs-6 mb-3 mt-5 fontFamily btn-hover"
+      (click)="loadAllCards()"
+    >
+      <i class="bi bi-arrow-down fs-6 fw-bolder"></i> Load more
+    </button>
+  }
+</div>
