@@ -12,7 +12,7 @@ export class CardComponent {
     {
       category: 'Design',
       title: 'UX Review Presentations',
-      description: 'Discover the latest techniques to improve your website search rankings.',
+      description: 'How do you create compelling presentations that wow your colleagues and impress your managers?',
       avatar: '/images/Avatar.png',
       image: '/images/Image.png',
       author: 'Card Title',

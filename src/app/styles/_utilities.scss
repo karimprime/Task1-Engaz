@@ -13,6 +13,10 @@
   color: variables.$text-gray-color;
 }
 
+.text-black-color {
+  color: variables.$text-black-color;
+}
+
 .bg-color {
   background-color: variables.$bg-color;
 }
@@ -29,6 +33,8 @@
   position: relative;
   width: 100%;
   max-width: 300px;
+  margin-top: 2.5rem;
+  margin-bottom: 6rem;
 
   input {
     width: 100%;
@@ -42,5 +48,14 @@
     transform: translateY(-50%);
     color: variables.$primary-text-color;
     pointer-events: none;
+  }
+}
+
+
+@media (min-width: 400px) and (max-width: 791px) {
+
+  .search-input {
+    width: 100%;
+    margin-bottom: 4rem;
   }
 }
